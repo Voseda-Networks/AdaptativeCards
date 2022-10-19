@@ -1,0 +1,171 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01YRY5SSNWTJZ04Cz6xt3aczVu8BgLOlc93",
+    "name": "Microsoft Teams | Send Card Message v2",
+    "title": "Microsoft Teams | Send Card Message v2",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Body",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YRY5ST3N2K00soV1pddnkAIMob4Gil8ix",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Descripicion de notificacion",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YRY5ST3MAX87B7dzh5Pg6URge5t8Qhwe9",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Webhook",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YRY5ST3LXY47AJ7EzRU3dzEcpKztEls9t",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Payload",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YRY5ST3LKEE05naOcwi6IlFr5hKn78qR6",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Action",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YTQE44EXAZF3dfl53QhLdBCWjHo3ICut9",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Tipo de notificación",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01YRY5ST3MOTS1B7CwvNPnypb113MxBw5Gw",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "Button Link",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01ZCB860YO4466ZFk4s9UPSDFP34acZhW2U",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "atomic_group": "Microsoft Teams",
+        "is_atomic": true
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Microsoft Teams | Send Card Message v2",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01YRY5T066QQA3kaoOXk7e1fPw1ikqUuJkz",
+        "name": "Set Variables",
+        "title": "Set Variables",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Set Variables",
+          "skip_execution": false,
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_01YRY5SSNWTJZ04Cz6xt3aczVu8BgLOlc93.local.variable_workflow_01YRY5ST3N2K00soV1pddnkAIMob4Gil8ix$",
+              "variable_value_new": "{\n\"type\":\"message\",\n\"attachments\": [\n{\n\"contentType\": \"application/vnd.microsoft.card.adaptive\",\n\"content\": {\n\"type\": \"AdaptiveCard\",\n\"version\": \"1.0\",\n\"body\": [\n{\n\"type\": \"ColumnSet\",\n\"columns\": [\n{\n\"type\": \"Column\",\n\"width\": \"50px\",\n\"items\": [\n{\n\"type\": \"Image\",\n\"url\": \"https://i.ibb.co/5r1wb9j/isotipo-voseda-color.jpg\",\n\"size\": \"Stretch\",\n\"width\": \"50px\",\n\"height\": \"50px\",\n\"style\": \"Person\"\n}\n]\n},\n{\n\"type\": \"Column\",\n\"width\": \"stretch\",\n\"items\": [\n{\n\"type\": \"TextBlock\",\n\"text\": \"$workflow.definition_workflow_01YRY5SSNWTJZ04Cz6xt3aczVu8BgLOlc93.input.variable_workflow_01YRY5ST3MOTS1B7CwvNPnypb113MxBw5Gw$\",\n\"weight\": \"Lighter\",\n\"color\": \"Accent\",\n\"spacing\": \"Small\",\n\"horizontalAlignment\": \"Center\",\n\"height\": \"stretch\",\n\"style\": \"columnHeader\",\n\"fontType\": \"Default\",\n\"size\": \"Medium\",\n\"isSubtle\": false\n}\n]\n}\n]\n},\n{\n\"type\": \"TextBlock\",\n\"weight\": \"Bolder\",\n\"text\": \"$workflow.definition_workflow_01YRY5SSNWTJZ04Cz6xt3aczVu8BgLOlc93.input.variable_workflow_01YRY5ST3MAX87B7dzh5Pg6URge5t8Qhwe9$\",\n\"horizontalAlignment\": \"Center\",\n\"wrap\": true,\n\"color\": \"Light\",\n\"size\": \"Small\",\n\"separator\": true,\n\"height\": \"stretch\",\n\"fontType\": \"Default\",\n\"spacing\": \"Medium\",\n\"isSubtle\": true\n},\n{\n\"type\": \"TextBlock\",\n\"text\": \"$workflow.definition_workflow_01YRY5SSNWTJZ04Cz6xt3aczVu8BgLOlc93.input.variable_workflow_01YRY5ST3LKEE05naOcwi6IlFr5hKn78qR6$\",\n\"wrap\": true,\n\"separator\": true,\n\"spacing\": \"Medium\",\n\"size\": \"Small\"\n},\n{\n\"type\": \"ActionSet\",\n\"actions\": [\n{\n\"type\": \"Action.OpenUrl\",\n\"url\": \"$workflow.definition_workflow_01YRY5SSNWTJZ04Cz6xt3aczVu8BgLOlc93.input.variable_workflow_01ZCB860YO4466ZFk4s9UPSDFP34acZhW2U$\",\n\"title\": \"$workflow.definition_workflow_01YRY5SSNWTJZ04Cz6xt3aczVu8BgLOlc93.input.variable_workflow_01YTQE44EXAZF3dfl53QhLdBCWjHo3ICut9$\",\n\"style\": \"destructive\"\n}\n],\n\"horizontalAlignment\": \"Center\",\n\"spacing\": \"Small\"\n}\n],\n\"$schema\": \"http://adaptivecards.io/schemas/adaptive-card.json\"\n}\n}\n]\n}"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01YRY5T3MJ7W27Dyq1xTjkcWYQerhkWIaZI",
+        "name": "Execute Python Script",
+        "title": "Post Message",
+        "type": "python3.script",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "display_name": "Post Message",
+          "script": "import requests,sys\n\nbody = sys.argv[1].encode(encoding = 'UTF-8', errors = 'strict')\nwebhook = sys.argv[2]\nresponse = requests.post(url = webhook, data = body ) ",
+          "script_arguments": [
+            "$workflow.definition_workflow_01YRY5SSNWTJZ04Cz6xt3aczVu8BgLOlc93.local.variable_workflow_01YRY5ST3N2K00soV1pddnkAIMob4Gil8ix$",
+            "$workflow.definition_workflow_01YRY5SSNWTJZ04Cz6xt3aczVu8BgLOlc93.input.variable_workflow_01YRY5ST3LXY47AJ7EzRU3dzEcpKztEls9t$"
+          ],
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_01EI33LMFFL7N5eTQLsOOJIrxdlSOHb7r3r"
+    ]
+  },
+  "categories": {
+    "category_01EI33LMFFL7N5eTQLsOOJIrxdlSOHb7r3r": {
+      "unique_name": "category_01EI33LMFFL7N5eTQLsOOJIrxdlSOHb7r3r",
+      "name": "SecureX",
+      "title": "SecureX",
+      "type": "basic.category",
+      "base_type": "category",
+      "category_type": "custom",
+      "object_type": "category"
+    }
+  }
+}
